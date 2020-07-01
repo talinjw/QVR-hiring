@@ -1,6 +1,6 @@
 # Table Stakes
 
-Functions for this challenge live in ```table_stakes.py```; tests should live in ```table_stakes_test.py```. For each question, implement (or correct) the complete the associated function and write unit tests for them. We are looking for completeness where
+Functions for this challenge live in ```table_stakes.py```; tests should live in ```table_stakes_test.py```. For each question, implement (or correct) the associated function and write unit tests for them. We are relying on your unit tests to show us how you define and go about implementing problems, so please try to be thorough.
 
 ## Hello World! (is my environment working?)
 
@@ -18,23 +18,22 @@ Functions for this challenge live in ```table_stakes.py```; tests should live in
 
 How would you avoid this category of error?
 
-## Base64 Encoder (medium)
 
-Given the string ```hex```, the function ```base64_from_hex``` returns its [base64](https://en.wikipedia.org/wiki/Base64) representation. Do not use the built-in python module.
+## Testing an external service (medium)
 
-By way of example, the input ```hex```...
+Your co-worker has not heard of ```boto```, and has shoddily implemented a call to copy a local file to S3 using the function ```put_to_s3```.
 
-```
-49276d206b696c6c696e6720796f757220627261696e206c696b65206120706f69736f6e6f7573206d757368726f6f6d
-```
+Enhance the function to ensure that the function raises a ```QvrRuntimeError``` when the following errors are encountered from S3.
 
-...should produce:
+* ```NoSuchKey```
+* ```NoSuchBucket```
 
-```
-SSdtIGtpbGxpbmcgeW91ciBicmFpbiBsaWtlIGEgcG9pc29ub3VzIG11c2hyb29t
-```
+(S3 errors definitions can be found [here](https://docs.aws.amazon.com/AmazonS3/latest/API/ErrorResponses.html).)
 
-Think *carefully* about edge cases.
+All other errors should be ignored.
+
+Additionally provide unit tests that mock out the ```subprocess``` module and ensure that the function can be tested without actually spawning a subprocess.
+
 
 ## Teacher's best friend (hard)
 
@@ -85,4 +84,4 @@ The returned grade distribution should look like this:
     ], columns=['grade', 'count'])
 ```
 
-... where XX is the number of students achieving that grade
+... where ```XX``` is the number of students achieving that grade

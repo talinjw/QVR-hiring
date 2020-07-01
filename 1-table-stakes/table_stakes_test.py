@@ -25,11 +25,11 @@ class TestTableStakes(unittest.TestCase):
     ### endregion calculate_mode_tests
 
 
+    ### region put_to_s3_tests
+
+    ### endregion put_to_s3_tests
+
+
     ### region class_grade_distribution_tests
 
     ### endregion class_grade_distribution_tests
-
-
-    ### region base64_from_hex_tests
-
-    ### endregion base64_from_hex_tests

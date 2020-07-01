@@ -6,7 +6,7 @@ We don't particularly like the hazing that accompanies most technical job interv
 
 ## The Rules
 
-Please send PRs for each problem set attempted within 72 hours of receiving a link to the repository.
+Please send PRs for each problem set attempted within 96 hours of receiving a link to the repository.
 
 We will schedule an hour to discuss your answers after that.
 

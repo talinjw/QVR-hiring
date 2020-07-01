@@ -1,6 +1,7 @@
 
 import pandas as pd
 import datetime as dt
+import subprocess as sp
 
 def is_palindrome(word):
 
@@ -27,11 +28,11 @@ def calculate_mode(l):
     return max
 
 
+def put_to_s3(file, bucket):
+
+    sp.check_output(['aws', 's3', 'cp', file, 's3://{0}/{1}'.format(bucket, file)])
+
+
 def grade_distribution(raw_scores):
-
-    pass
-
-
-def base64_from_hex(hex):
 
     pass
