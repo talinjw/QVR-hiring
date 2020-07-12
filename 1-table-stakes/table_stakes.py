@@ -3,7 +3,6 @@ import pandas as pd
 import numpy as np
 import datetime as dt
 import subprocess as sp
-import json
 import warnings
 
 from pathlib import Path
